@@ -9,10 +9,10 @@ mutual TLS enabled and Helm charts. It makes use of the new
 
 ## Overview
 
-- *nginx*: Nginx chart and a custom Nginx container.
-- *servcices*: for the sake of simplicity Nginx is used in this demo. You could
+- _nginx_: Nginx chart and a custom Nginx container.
+- _services_: for the sake of simplicity Nginx is used in this demo. You could
   setup multiple microservices as sub-chart in this directory.
-- *traffic-manager*: chart with all the Istio configuration.
+- _traffic-manager_: chart with all the Istio configuration.
 
 ## Getting started
 
