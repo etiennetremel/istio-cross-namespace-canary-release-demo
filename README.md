@@ -1,11 +1,11 @@
-Cross-namespace canary release using Istio and Helm
-===================================================
+Cross-namespace canary release using Kubernetes, Istio and Helm
+===============================================================
 
 > Demo of a cross-namespace canary release using Istio service mesh with
 mutual TLS enabled and Helm charts. It makes use of the new
 [Istio v1alpha3 routing API](https://preliminary.istio.io/blog/2018/v1alpha3-routing.html).
 
-![](istio-cross-namespace-canary-release.png)
+![cross-namespace-canary-release](istio-cross-namespace-canary-release.png)
 
 ## Overview
 
