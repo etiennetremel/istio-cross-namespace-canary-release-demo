@@ -1,0 +1,9 @@
+search:
+  replicaCount: 1
+
+## Not used, but we could assume we have a set of applications
+# booking:
+#   replicaCount: 1
+
+# payment:
+#   replicaCount: 1

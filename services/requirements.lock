@@ -1,0 +1,6 @@
+dependencies:
+- name: nginx
+  repository: file://../nginx/charts
+  version: 1.0.0
+digest: sha256:19183b1f7ebde04d52e9914759e33532c1d212feed3dde2d534de412512b3afd
+generated: 2018-05-12T17:30:46.745225275+01:00

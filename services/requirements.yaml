@@ -1,0 +1,13 @@
+dependencies:
+  - name: nginx
+    version: 1.0.0
+    repository: file://../nginx/charts
+    alias: search
+  # - name: nginx
+  #   version: 1.0.0
+  #   repository: file://../nginx/charts
+  #   alias: booking
+  # - name: nginx
+  #   version: 1.0.0
+  #   repository: file://../nginx/charts
+  #   alias: payment

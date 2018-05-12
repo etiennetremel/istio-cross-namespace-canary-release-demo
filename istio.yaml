@@ -1,0 +1,81 @@
+global:
+  hub: gcr.io/istio-release
+
+  # controlPlaneMtls enabled. Will result in delays starting the pods while secrets are
+  # propagated, not recommended for tests.
+  controlPlaneSecurityEnabled: true
+
+  mtls:
+    # Default setting for service-to-service mtls. Can be set explicitly using
+    # destination rules or service annotations.
+    enabled: true
+
+  rbacEnabled: true
+
+  refreshInterval: 1s
+
+## Istio Testing
+##
+istiotesting:
+  oneNameSpace: false
+
+## Ingress
+##
+ingress:
+  enabled: false
+
+## Ingress Gateway
+##
+ingressgateway:
+  enabled: true
+
+## Egress Gateway
+##
+egressgateway:
+  enabled: true
+
+## Sidecar Injector
+##
+sidecar-injector:
+  enabled: true
+
+## Galley
+##
+galley:
+  enabled: false
+
+## Mixer
+##
+mixer:
+  enabled: true
+
+## Pilot
+##
+pilot:
+  enabled: true
+
+## Security
+##
+security:
+  enabled: true
+
+## Grafana
+##
+grafana:
+  enabled: false
+
+## Zipkin
+##
+zipkin:
+  enabled: false
+
+## Service Graph
+##
+servicegraph:
+  enabled: false
+
+## Prometheus
+##
+prometheus:
+  enabled: false
+
