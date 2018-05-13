@@ -1,4 +1,4 @@
-## Domain mapped to the services
+## Entrypoint domain
 host: search.local
 
 ## Canary
@@ -7,9 +7,17 @@ canary:
   weight: 10
   serviceName: search.services-v2.svc.cluster.local
 
-  ## If we only want users to access the canary release based on the header
-  ## X-Track: canary instead of weight. If true, weight is ignored.
-  onlyMatchHeader: false
+  ## If we only want users to access the canary release based on headers
+  match: {}
+    ## Only users with cookie 'access=v2' can access the canary release
+    # - headers:
+    #     cookie:
+    #       regex: "^(.*?;)?(access=v2)(;.*)?"
+
+    ## Only users with header 'X-Track: canary' can access the canary release
+    # - headers:
+    #     x-track:
+    #       exact: canary
 
 ## Stable
 stable:

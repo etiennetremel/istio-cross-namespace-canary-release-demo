@@ -14,14 +14,13 @@ spec:
     - {{ template "traffic-manager.fullname" . }}
   http:
   {{- if .Values.canary.enabled }}
-    {{- if .Values.canary.onlyMatchHeader }}
+    {{- if gt (len .Values.canary.match) 0 }}
     - route:
         - destination:
             host: {{ .Values.canary.serviceName }}
       match:
-        - headers:
-            x-track:
-              exact: canary
+{{ toYaml .Values.canary.match | indent 8 }}
+
     - route:
     {{- else }}
     - route:
@@ -32,6 +31,6 @@ spec:
   {{- end }}
         - destination:
             host: {{ .Values.stable.serviceName }}
-          {{- if and .Values.canary.enabled (not .Values.canary.onlyMatchHeader) }}
+          {{- if and .Values.canary.enabled (eq (len .Values.canary.match) 0) }}
           weight: {{ .Values.stable.weight }}
           {{- end }}

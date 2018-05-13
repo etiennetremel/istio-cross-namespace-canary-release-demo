@@ -71,4 +71,4 @@ releasecanarymatchheader:
 .PHONY: buildnginx
 buildnginx:
 	eval $$(minikube docker-env); \
-	docker build -t nginx:alpine nginx
+	docker build -t nginx:alpine-curl nginx

@@ -14,68 +14,12 @@ global:
 
   refreshInterval: 1s
 
-## Istio Testing
-##
-istiotesting:
-  oneNameSpace: false
-
-## Ingress
-##
-ingress:
-  enabled: false
-
-## Ingress Gateway
-##
-ingressgateway:
-  enabled: true
-
-## Egress Gateway
-##
-egressgateway:
-  enabled: true
-
 ## Sidecar Injector
 ##
 sidecar-injector:
   enabled: true
 
-## Galley
-##
-galley:
+## Ingress
+## Disable default ingress controller since we use the ingress gateway
+ingress:
   enabled: false
-
-## Mixer
-##
-mixer:
-  enabled: true
-
-## Pilot
-##
-pilot:
-  enabled: true
-
-## Security
-##
-security:
-  enabled: true
-
-## Grafana
-##
-grafana:
-  enabled: false
-
-## Zipkin
-##
-zipkin:
-  enabled: false
-
-## Service Graph
-##
-servicegraph:
-  enabled: false
-
-## Prometheus
-##
-prometheus:
-  enabled: false
-
