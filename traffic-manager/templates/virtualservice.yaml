@@ -13,9 +13,9 @@ spec:
   gateways:
     - {{ template "traffic-manager.fullname" . }}
   http:
+    - route:
   {{- if .Values.canary.enabled }}
     {{- if gt (len .Values.canary.match) 0 }}
-    - route:
         - destination:
             host: {{ .Values.canary.serviceName }}
       match:
@@ -23,7 +23,6 @@ spec:
 
     - route:
     {{- else }}
-    - route:
         - destination:
             host: {{ .Values.canary.serviceName }}
           weight: {{ .Values.canary.weight }}
