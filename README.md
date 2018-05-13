@@ -120,6 +120,7 @@ Host: search-77f9697d44-l8dtc
 
 # when we are ready, shift 100%
 $ helm upgrade traffic-manager \
+    --reset-values \
     --set stable.serviceName=search.services-v2.svc.cluster.local \
     ./traffic-manager
 
@@ -130,7 +131,7 @@ $ helm upgrade traffic-manager \
 
 # shift 100% traffic back to services-v1
 $ helm upgrade traffic-manager \
-    --set stable.serviceName=search.services-v1.svc.cluster.local \
+    --reset-values \
     ./traffic-manager
 
 
